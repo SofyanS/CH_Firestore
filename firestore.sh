@@ -2,7 +2,7 @@
 export REGISTRY_ID=config-demo
 export CLOUD_REGION=us-central1
 export GCLOUD_PROJECT=$(gcloud config list project --format "value(core.project)")
-firebase login --no-localhost
+# firebase login --no-localhost # Do I even need to do this?
 
 # Create a Pub/Sub a Pub/Sub topic
 gcloud pubsub topics create device-events
