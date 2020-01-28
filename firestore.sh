@@ -24,4 +24,4 @@ cd ../sample-device
 gcloud iot devices create sample-device --region $CLOUD_REGION --registry $REGISTRY_ID --public-key path=./ec_public.pem,type=ES256
 
 # Modify the Configuration
-node build/index.js
+#node build/index.js
