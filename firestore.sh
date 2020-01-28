@@ -21,12 +21,11 @@ firebase --project $GCLOUD_PROJECT deploy --only functions
 cd ../sample-device
 gcloud iot devices create sample-device --region $CLOUD_REGION --registry $REGISTRY_ID --public-key path=./ec_public.pem,type=ES256
 
-# Modify the Configuration
-# node build/index.js # Do I even need to do this?
-
-# Binary data with CBOR
+# Deploy the second Relay Function
 cd ../functions
 firebase --project $GCLOUD_PROJECT deploy --only functions
+
+# Create second device
 cd ../sample-device/
 gcloud iot devices create sample-binary --region $CLOUD_REGION --registry $REGISTRY_ID --public-key path=./ec_public.pem,type=ES256
 
